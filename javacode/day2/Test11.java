@@ -10,8 +10,8 @@ package day2;
 59分以下：F
 
 您的任務是根據以下要求，用二種不同的方法計算等級：
-1.使用switch結構：
-2.使用三元運算符?:：
+1.使用switch結構
+2.使用三元運算符 ?:
 
 最終輸出以下內容（假設score為75）：
 用 switch 處理，分數: 75，等級: C
@@ -22,8 +22,93 @@ package day2;
 
 public class Test11 {
 	public static void main(String[] args) {
-		
+		int score = 75;
+		switch(score/10) {
+			case 10:
+			case 9:
+				System.out.println("A");
+				break;
+			case 8:
+				System.out.println("B");
+				break;
+			case 7:
+				System.out.println("C");
+				break;
+			case 6:
+				System.out.println("D");
+				break;
+			default:
+				System.out.println("F");
+		}
 
+		// 嵌套式  ?:
+		String grade = score >= 90 ? "A" : score >= 80 ? "B" : score >= 70 ? "C" : score >= 60 ? "D" : "F";
+		System.out.println(grade);
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
