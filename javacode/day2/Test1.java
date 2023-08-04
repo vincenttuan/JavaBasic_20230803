@@ -26,6 +26,12 @@ public class Test1 {
 		boolean flag = true; // true or false
 		boolean isPass = (45 >= 60);
 		System.out.printf("%b %b\n", flag, isPass);
+		// int 轉 char
+		char word = 25105; // int 轉 char
+		System.out.printf("%c\n", word);
+		//  char 轉 int
+		int number = '我';
+		System.out.printf("%d\n", number);
 
 
 	}	
