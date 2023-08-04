@@ -42,10 +42,14 @@ public class Test6 {
 		} else if (qty > 5) {
 			discount = 0.10;
 		}
+		/*
 		int finalPrice = (int)((price * qty) * (1 - discount));
-
 		System.out.printf("原價: $%d\n數量: %d\n折扣: %.2f%%\n最終價: $%d\n", 
 							price, qty, discount*100, finalPrice);
+		*/
+		double finalPrice = (price * qty) * (1 - discount);
+		System.out.printf("原價: $%d\n數量: %d\n折扣: %.2f%%\n最終價: $%.0f\n", 
+							price, qty, discount*100, finalPrice); 					
 	}
 }
 
