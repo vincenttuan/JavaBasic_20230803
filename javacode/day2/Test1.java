@@ -15,14 +15,14 @@ public class Test1 {
 		float pi = 3.14f;
 		double price = 123456789.87654321;
 		System.out.printf("%.2f %.2f\n", pi, price);
-		// 字元 chat
+		// 字元 char
 		// bits 16
 		char c1 = '我';
 		char c2 = 'A';
 		char c3 = 65; // 65 就是 'A', 請參考 ASCII 編碼
 		char c4 = '\u0048'; // u0048 就是 'H', 請參考 unicode 編碼
 		System.out.printf("%c %c %c %c\n", c1, c2, c3, c4);
-		
+
 	}	
 
 }
