@@ -17,6 +17,17 @@ public class Test9 {
 		// 利用  ? : 來判斷男女
 		System.out.println( (sex == '1') ? "男性" : "女性" );
 
+		// 利用 switch-case
+		switch(sex) {
+			case '1':
+				System.out.println("男性");
+				break; // 跳出 switch
+			case '2':
+				System.out.println("女性");
+				break; // 跳出 switch
+			default:
+				System.out.println("其他");
+		}
 	}
 
 }
