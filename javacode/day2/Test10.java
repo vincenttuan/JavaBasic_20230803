@@ -19,7 +19,34 @@ package day2;
 public class Test10 {
 
 	public static void main(String[] args) {
-		
+		String id = "A123456789";
+		char code = id.charAt(2); // 第三碼
+		switch(code) {
+			case '0':
+			case '1':
+			case '2':
+			case '3':
+			case '4':
+			case '5':
+				System.out.println("在臺灣出生之本籍國民");
+				break;
+			case '6':
+				System.out.println("入籍國民，原為外國人");
+				break;
+			case '7':
+				System.out.println("入籍國民，原為無戶籍國民");
+				break;
+			case '8':
+				System.out.println("入籍國民，原為港澳居民");
+				break;
+			case '9':
+				System.out.println("入籍國民，原為中國大陸人民");
+				break;
+			default:
+				System.out.println("身分證不正確");
+
+		}
+
 	}
 
 }
