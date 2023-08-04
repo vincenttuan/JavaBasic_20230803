@@ -25,11 +25,27 @@ package day2;
 原價: $120
 數量: 11
 折扣: 15.0%
-最終價: $954
+最終價: $1122
 
 */
+import java.util.Scanner;
+
 public class Test6 {
 	public static void main(String[] args) {
-		
+		Scanner sc = new Scanner(System.in);
+		int price = 120;
+		System.out.printf("商品價格 %d 請輸入購買數量:", price);
+		int qty = sc.nextInt();
+		double discount = 0.0;
+		if(qty >= 10) {
+			discount = 0.15;
+		} else if (qty > 5) {
+			discount = 0.10;
+		}
+		int finalPrice = (int)((price * qty) * (1 - discount));
+
+		System.out.printf("原價: $%d\n數量: %d\n折扣: %.2f%%\n最終價: $%d\n", 
+							price, qty, discount*100, finalPrice);
 	}
 }
+
