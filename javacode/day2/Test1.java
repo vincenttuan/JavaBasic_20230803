@@ -22,6 +22,11 @@ public class Test1 {
 		char c3 = 65; // 65 就是 'A', 請參考 ASCII 編碼
 		char c4 = '\u0048'; // u0048 就是 'H', 請參考 unicode 編碼
 		System.out.printf("%c %c %c %c\n", c1, c2, c3, c4);
+		// 布林 boolean
+		boolean flag = true; // true or false
+		boolean isPass = (45 >= 60);
+		System.out.printf("%b %b\n", flag, isPass);
+
 
 	}	
 
