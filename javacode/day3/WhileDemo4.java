@@ -34,6 +34,10 @@ public class WhileDemo4 {
 
 	public static void main(String[] args) {
 		int fruitStock = 20; // 水果的初始庫存
+		int fruitPrice = 10; // 每個水果的價格
+		int totalCost = 0; // 使用者需要支付的總金額
+		int totalAmount = 0; // 使用者總共買了幾個水果
+
 		Scanner sc = new Scanner(System.in);
 		
 		while(fruitStock > 0) {
@@ -47,6 +51,10 @@ public class WhileDemo4 {
 			} else {
 				// 成功買入(庫存要減去購買數量)
 				fruitStock -= purchaseAmount;
+				// 計算使用者的總花費
+				totalCost += purchaseAmount * fruitPrice;
+				// 計算總共買了幾個水果
+				totalAmount += purchaseAmount;
 			}
 		}
 
@@ -54,6 +62,7 @@ public class WhileDemo4 {
 			System.out.println("水果無庫存");
 		}
 
+		System.out.printf("使用者共買了 %d 個水果, 需要支付的總金額是 %d 元\n", totalAmount, totalCost);
 		System.out.println("程式結束");
 		sc.close();
 
