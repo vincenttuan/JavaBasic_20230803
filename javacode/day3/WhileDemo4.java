@@ -23,10 +23,35 @@ package day3;
 
 */
 
+import java.util.Scanner;
+
 public class WhileDemo4 {
 
 	public static void main(String[] args) {
+		int fruitStock = 20; // 水果的初始庫存
+		Scanner sc = new Scanner(System.in);
 		
+		while(fruitStock > 0) {
+			System.out.printf("水果庫存有 %d 個, 請輸入要買的數量:", fruitStock);
+			int purchaseAmount = sc.nextInt();
+			if(purchaseAmount == 0) {
+				System.out.println("使用者買完了");
+				break;
+			} else if(purchaseAmount > fruitStock) {
+				System.out.println("水果庫存不足請重新輸入");
+			} else {
+				// 成功買入(庫存要減去購買數量)
+				fruitStock -= purchaseAmount;
+			}
+		}
+
+		if(fruitStock == 0) {
+			System.out.println("水果無庫存");
+		}
+
+		System.out.println("程式結束");
+		sc.close();
+
 	}
 
 }
